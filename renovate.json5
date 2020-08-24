@@ -1,0 +1,57 @@
+{
+  extends: [
+    'config:base',
+  ],
+  includePaths: [
+    'package.json',
+    'x-pack/package.json',
+  ],
+  baseBranches: [
+    'master',
+  ],
+  labels: [
+    'release_note:skip',
+    'Team:Operations',
+    'renovate',
+    'v8.0.0',
+    'v7.10.0',
+  ],
+  major: {
+    labels: [
+      'release_note:skip',
+      'Team:Operations',
+      'renovate',
+      'v8.0.0',
+      'v7.10.0',
+      'renovate:major',
+    ],
+  },
+  separateMajorMinor: false,
+  masterIssue: false,
+  rangeStrategy: 'bump',
+  npm: {
+    lockFileMaintenance: {
+      enabled: false,
+    },
+    packageRules: [
+      {
+        groupSlug: '@elastic/charts',
+        packageNames: ['@elastic/charts'],
+        reviewers: ['markov00'],
+      },
+      {
+        packagePatterns: [
+          '.*',
+        ],
+        enabled: false,
+      },
+    ],
+  },
+  prConcurrentLimit: 0,
+  vulnerabilityAlerts: {
+    enabled: false,
+  },
+  rebaseStalePrs: false,
+  rebaseConflictedPrs: false,
+  semanticCommits: false,
+}

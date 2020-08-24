@@ -1,0 +1,25 @@
+@include euiHeaderAffordForFixed;
+
+// TODO #64541
+// Delete this block
+.chrHeaderWrapper:not(.headerWrapper) {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.chrHeaderHelpMenu__version {
+  text-transform: none;
+}
+
+.chrHeaderBadge__wrapper {
+  align-self: center;
+  margin-right: $euiSize;
+}
+
+.header__toggleNavButtonSection {
+  .euiBody--collapsibleNavIsDocked & {
+    display: none;
+  }
+}
