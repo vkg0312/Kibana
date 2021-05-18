@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+#maindiv{
+		background-color: lightgray;
+	}
+ #rightdiv{
+   position:absolute;
+   top:0;
+   right:0;
+  
+   padding: 5px 10px 0px 10px;
+  }
+#leftdiv{
+   position:relative;
+   top:0;
+   left:0;
+   
+   padding: 5px 10px 0px 10px;
+  }
+	#output{
+		position: relative;
+		
+	}
+	#result{
+		
+		background-color: dimgray
+	}
+
+</style>
+<title>Data  Search</title>
+</head>
+
+<body>
+	<div id="maindiv">
+		<div id="leftdiv">
+		<table class="table">
+
+   <tbody>
+      <tr>
+         
+         <td>
+			 <form action="/action_page.php">
+			 <tr>
+				 <td>
+					 <span class="label label-default">Filters :</span>
+</td>
+				 <td>
+				 	<select name="cars" id="cars">
+  						<option value="volvo">Volvo</option>
+  						<option value="saab">Saab</option>
+  						<option value="mercedes">Mercedes</option>
+  						<option value="audi">Audi</option>
+					</select>
+				 </td>
+				 <td>
+				 <select name="cars" id="car2">
+  						<option value="volvo">Volvo</option>
+  						<option value="saab">Saab</option>
+  						<option value="mercedes">Mercedes</option>
+  						<option value="audi">Audi</option>
+					</select>
+				 </td>
+				 <td>
+				 <button type="button">Add</button>
+
+				 </td>
+			 </tr>
+			 <tr>
+				 <td>
+				 	<span class="label label-default">Others :</span>
+				 </td>
+				 <td>
+					 <input type="text" id="freetext" name="freetext">
+				 </td>
+				 <td></td>
+				 <td></td>
+			 </tr>
+			 <tr>
+				  <td><span class="label label-default">Query Type :</span></td>
+				 <td>
+					 <input type="radio" id="and" name="querytype" value="and">
+						<label for="and">AND</label>
+				 </td>
+				 <td>
+				 <input type="radio" id="or" name="querytype" value="or">
+						<label for="or">OR</label>
+				 
+				 </td>
+				 <td></td>
+			 </tr>
+			 <tr>
+			  <td><span class="label label-default">Key Words :</span></td>
+				 <td><textarea readonly>
+
+				</textarea>
+				 </td>
+				 <td></td>
+				 <td></td>
+			 </tr>
+			 <tr>
+			  <td></td>
+				 <td><br /><input type="submit" value="Search Data"></td>
+				 <td></td>
+				 <td></td>
+			 </tr>
+				 </form>
+		  </td>
+         </tr>
+		   </tbody>
+</table>
+</div>		  
+		  
+		  <div id="rightdiv">
+			  <table class="table">
+				  <tbody>
+			  <tr>
+				  <td>
+				  <span class="label label-default">Recent Search :</span>
+				  </td>
+			  </tr>
+			  <tr>
+			  <td>
+				  <textarea readonly>
+
+				</textarea>
+				  
+				  </td>
+			  
+			  </tr>
+		</tbody>
+		</table>		  
+		  </div>
+	</div>
+	<div id="output">
+	 <table class="table">
+				  <tbody>
+			  <tr>
+				  <td>
+				  <span class="label label-default">Output :</span>
+				  </td>
+			  </tr>
+			  <tr><td>
+				  <div id="result">
+				  <span>Some text</span>
+				  
+				  </div>
+				  
+				  
+				  </td></tr>
+			
+	</tbody>
+    </table>
+	</div>
+         
+      
+      
+  
+</body>
+</html>
